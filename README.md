@@ -1,1 +1,3 @@
-# monolith
+# Monolith
+
+Laravel Boilerplate with Inertia Stack.

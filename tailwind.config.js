@@ -7,6 +7,7 @@ module.exports = {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
+        './node_modules/vue-tailwind/dist/*.js'
     ],
 
     theme: {
@@ -20,6 +21,7 @@ module.exports = {
     variants: {
         extend: {
             opacity: ['disabled'],
+            cursor: ['disabled'],
         },
     },
 

@@ -5,6 +5,35 @@ import Vue from 'vue';
 import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue';
 import { InertiaProgress } from '@inertiajs/progress';
 import PortalVue from 'portal-vue';
+import VueTailwind from 'vue-tailwind';
+import {
+    TInput,
+    TTextarea,
+    TSelect,
+    TRadio,
+    TCheckbox,
+    TButton,
+    TInputGroup,
+    TCard,
+    TAlert,
+    TModal,
+    TDropdown,
+    TRichSelect,
+    TPagination,
+    TTag,
+    TRadioGroup,
+    TCheckboxGroup,
+    TTable,
+    TDatepicker,
+    TToggle,
+    TDialog,
+} from 'vue-tailwind/dist/components';
+const settings = {
+    't-button': {
+        component: TButton,
+    },
+};
+Vue.use(VueTailwind, settings);
 
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);

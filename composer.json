@@ -1,9 +1,10 @@
 {
     "name": "wpseed/monolith",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Monolith - Laravel Boilerplate with Inertia Stack.",
     "keywords": [
         "framework",
+        "inertia",
         "laravel"
     ],
     "license": "MIT",

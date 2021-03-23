@@ -7,6 +7,7 @@ import {InertiaProgress} from '@inertiajs/progress';
 import PortalVue from 'portal-vue';
 import VueTailwind from 'vue-tailwind';
 import {TButton, TInput,} from 'vue-tailwind/dist/components';
+import { __ } from "matice";
 
 const settings = {
   't-input': {
@@ -19,6 +20,7 @@ const settings = {
 Vue.use(VueTailwind, settings);
 
 Vue.mixin({methods: {route}});
+Vue.mixin({ methods: { $t: __ } });
 Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
 

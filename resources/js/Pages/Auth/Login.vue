@@ -23,7 +23,7 @@
 
             <div class="block mt-4">
                 <label class="flex items-center">
-                    <jet-checkbox name="remember" v-model:checked="form.remember" />
+                    <jet-checkbox name="remember" v-model="form.remember" />
                     <span class="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
             </div>
@@ -33,11 +33,14 @@
                     Forgot your password?
                 </inertia-link>
 
-                <t-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
-                </t-button>
+                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    Login
+                </jet-button>
             </div>
         </form>
+
+        <socialstream-providers v-if="$page.props.socialstream.show" />
+
     </jet-authentication-card>
 </template>
 
@@ -49,6 +52,7 @@
     import JetCheckbox from '@/Jetstream/Checkbox'
     import JetLabel from '@/Jetstream/Label'
     import JetValidationErrors from '@/Jetstream/ValidationErrors'
+    import SocialstreamProviders from '@/Socialstream/Providers'
 
     export default {
         components: {
@@ -58,7 +62,8 @@
             JetInput,
             JetCheckbox,
             JetLabel,
-            JetValidationErrors
+            JetValidationErrors,
+            SocialstreamProviders
         },
 
         props: {

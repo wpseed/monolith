@@ -8,31 +8,45 @@
 
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-                <div v-if="$page.props.jetstream.canUpdateProfileInformation">
+                 <div v-if="$page.props.jetstream.canUpdateProfileInformation">
                     <update-profile-information-form :user="$page.props.user" />
 
                     <jet-section-border />
                 </div>
 
-                <div v-if="$page.props.jetstream.canUpdatePassword">
+                <div v-if="$page.props.jetstream.canUpdatePassword && $page.props.socialstream.hasPassword">
                     <update-password-form class="mt-10 sm:mt-0" />
 
                     <jet-section-border />
                 </div>
 
-                <div v-if="$page.props.jetstream.canManageTwoFactorAuthentication">
+                <div v-else>
+                    <set-password-form class="mt-10 sm:mt-0" />
+
+                    <jet-section-border />
+                </div>
+
+                <div v-if="$page.props.jetstream.canManageTwoFactorAuthentication && $page.props.socialstream.hasPassword">
                     <two-factor-authentication-form class="mt-10 sm:mt-0" />
 
                     <jet-section-border />
                 </div>
 
-                <logout-other-browser-sessions-form :sessions="sessions" class="mt-10 sm:mt-0" />
+                <div v-if="$page.props.socialstream.show">
+                    <connected-accounts-form class="mt-10 sm:mt-0" />
+                </div>
 
-                <template v-if="$page.props.jetstream.hasAccountDeletionFeatures">
+                <div v-if="$page.props.socialstream.hasPassword">
+                    <jet-section-border />
+
+                    <logout-other-browser-sessions-form  :sessions="sessions" class="mt-10 sm:mt-0" />
+                </div>
+
+                <div v-if="$page.props.socialstream.hasPassword">
                     <jet-section-border />
 
                     <delete-user-form class="mt-10 sm:mt-0" />
-                </template>
+                </div>
             </div>
         </div>
     </app-layout>
@@ -44,18 +58,22 @@
     import JetSectionBorder from '@/Jetstream/SectionBorder'
     import LogoutOtherBrowserSessionsForm from './LogoutOtherBrowserSessionsForm'
     import TwoFactorAuthenticationForm from './TwoFactorAuthenticationForm'
+    import SetPasswordForm from './SetPasswordForm'
     import UpdatePasswordForm from './UpdatePasswordForm'
     import UpdateProfileInformationForm from './UpdateProfileInformationForm'
+    import ConnectedAccountsForm from './ConnectedAccountsForm';
 
     export default {
         props: ['sessions'],
 
         components: {
+            ConnectedAccountsForm,
             AppLayout,
             DeleteUserForm,
             JetSectionBorder,
             LogoutOtherBrowserSessionsForm,
             TwoFactorAuthenticationForm,
+            SetPasswordForm,
             UpdatePasswordForm,
             UpdateProfileInformationForm,
         },

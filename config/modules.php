@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'namespace' => 'Modules',
+    'namespace' => 'Modules\Wpseed',
 
     /*
     |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
         |
         */
 
-        'modules' => base_path('modules'),
+        'modules' => base_path('modules/Wpseed'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path

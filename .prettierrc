@@ -1,0 +1,15 @@
+{
+    "overrides": [
+        {
+            "files": [
+                "*.php"
+            ],
+            "options": {
+                "parser": "php",
+                "phpVersion": "7.4",
+                "braceStyle": "psr-2",
+                "singleQuote": true
+            }
+        }
+    ]
+}

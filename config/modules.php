@@ -210,10 +210,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'wpseed',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'Zorca Orcinus',
+            'email' => 'vs@zorca.org',
         ],
     ],
 

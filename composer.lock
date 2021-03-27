@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8dfb175da530a9e3486734afd7fa936",
+    "content-hash": "3b80fabbf13517642852ba36845f9c62",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8751,6 +8751,68 @@
                 }
             ],
             "time": "2020-07-12T23:59:07+00:00"
+        },
+        {
+            "name": "wpseed/inertia-laravel-crud-generator",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpseed/inertia-laravel-crud-generator.git",
+                "reference": "fccf3be67279fb5d09c9ea67ef1503b8d0dfe995"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpseed/inertia-laravel-crud-generator/zipball/fccf3be67279fb5d09c9ea67ef1503b8d0dfe995",
+                "reference": "fccf3be67279fb5d09c9ea67ef1503b8d0dfe995",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~7|~8"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5|~6",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wpseed\\InertiaLaravelCrudGenerator\\InertiaLaravelCrudGeneratorServiceProvider"
+                    ],
+                    "aliases": {
+                        "InertiaLaravelCrudGenerator": "Wpseed\\InertiaLaravelCrudGenerator\\Facades\\InertiaLaravelCrudGenerator"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wpseed\\InertiaLaravelCrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "zorca",
+                    "email": "vs@zorca.org",
+                    "homepage": "https://zorca.dev"
+                }
+            ],
+            "description": "Inertia Laravel CRUD Generator",
+            "homepage": "https://github.com/wpseed/inertia-laravel-crud-generator",
+            "keywords": [
+                "crud",
+                "generator",
+                "inertia",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/wpseed/inertia-laravel-crud-generator/issues",
+                "source": "https://github.com/wpseed/inertia-laravel-crud-generator/tree/1.0.4"
+            },
+            "time": "2021-03-20T15:31:18+00:00"
         }
     ],
     "aliases": [],

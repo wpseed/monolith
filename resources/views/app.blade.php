@@ -18,6 +18,8 @@
 
         <!-- Scripts -->
         @routes
+        <script src="{{ mix('js/manifest.js') }}" defer></script>
+        <script src="{{ mix('js/vendor.js') }}" defer></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <!-- Include Monolith Config -->
         {{--<script>window.config = ['resources']</script>--}}

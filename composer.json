@@ -20,6 +20,7 @@
         "laravel/jetstream": "^2.2",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "nwidart/laravel-modules": "^8.2",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
@@ -44,6 +45,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Modules\\": "modules/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

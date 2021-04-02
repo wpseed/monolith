@@ -21,6 +21,15 @@
         <script src="{{ mix('js/manifest.js') }}" defer></script>
         <script src="{{ mix('js/vendor.js') }}" defer></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <!-- Include Monolith Config -->
+        {{--<script>window.config = ['resources']</script>--}}
+        <!-- Build Nova Instance -->
+        <script type="module" defer>window.Monolith = new CreateMonolith()</script>
+
+        <!-- Modules Scripts -->
+
+        <!-- Start Monolith -->
+        <script type="module" defer>Monolith.starter()</script>
     </head>
     <body class="font-sans antialiased">
         @inertia

@@ -31,7 +31,7 @@
             @if (\Illuminate\Support\Str::startsWith($path, ['http://', 'https://']))
                 <script src="{!! $path !!}" defer></script>
             @else
-                <script src="/{{ $name }}/js/module.js" defer></script>
+                <script src="/modules/{{ $name }}/module.js" defer></script>
             @endif
         @endforeach
 

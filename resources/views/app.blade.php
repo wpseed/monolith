@@ -29,9 +29,9 @@
         <!-- Modules Scripts -->
         @foreach (\App\Monolith::availableScripts(request()) as $name => $path)
             @if (\Illuminate\Support\Str::startsWith($path, ['http://', 'https://']))
-                <script src="{!! $path !!}" defer></script>
+                <script src="{!! $path !!}" type="module" defer></script>
             @else
-                <script src="/modules/{{ $name }}/module.js" defer></script>
+                <script src="/modules/{{ $name }}/module.js" type="module" defer></script>
             @endif
         @endforeach
 

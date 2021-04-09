@@ -46,7 +46,7 @@ export default class Monolith {
    * Execute all of the booting callbacks.
    */
   boot() {
-    this.bootingCallbacks.forEach(callback => callback(Vue, router, store));
+    this.bootingCallbacks.forEach(callback => callback(Vue));
     this.bootingCallbacks = [];
   }
 
@@ -63,7 +63,7 @@ export default class Monolith {
    * Start the Monolith app by calling each of the tool's callbacks and then creating
    * the underlying Vue instance.
    */
-  starter() {
+  start() {
     let _this = this;
 
     this.boot();

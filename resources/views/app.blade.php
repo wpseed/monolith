@@ -27,9 +27,16 @@
         <script type="module" defer>window.Monolith = new CreateMonolith()</script>
 
         <!-- Modules Scripts -->
+        @foreach (\App\Monolith::availableScripts(request()) as $name => $path)
+            @if (\Illuminate\Support\Str::startsWith($path, ['http://', 'https://']))
+                <script src="{!! $path !!}" type="module" defer></script>
+            @else
+                <script src="/modules/{{ $name }}/module.js" type="module" defer></script>
+            @endif
+        @endforeach
 
         <!-- Start Monolith -->
-        <script type="module" defer>Monolith.starter()</script>
+        <script type="module" defer>Monolith.start()</script>
     </head>
     <body class="font-sans antialiased">
         @inertia

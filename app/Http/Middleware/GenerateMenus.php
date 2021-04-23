@@ -18,12 +18,12 @@ class GenerateMenus
     {
         \Menu::make('MainMenu', function ($menu) {
             $menu->add('Dashboard', ['route'  => 'dashboard'])->data('icon', 'ri-home-line');
-            $menu->add('Services', 'services');
+            $menu->add('Services', 'services')->data('icon', 'ri-service-line');
             $menu->get('services')->add('First service', ['route'  => 'dashboard']);
             $menu->item('services')->add('Second service', ['route'  => 'dashboard']);
             $menu->item('services')->add('Third service', ['route'  => 'dashboard']);
-            $menu->add('Contact', 'contact');
-            $menu->add('About', 'about');
+            $menu->add('Contact', 'contact')->data('icon', 'ri-contacts-book-line');
+            $menu->add('About', 'about')->data('icon', 'ri-service-line');
         });
 
         return $next($request);

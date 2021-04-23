@@ -30,6 +30,7 @@
                     :active="route().current(item.nickname)"
                     :href="route(item.nickname)"
                     ><v-icon
+                      class="mr-2"
                       v-if="item.meta.icon"
                       :name="item.meta.icon"
                     /><span>{{ $t(item.title) }}</span></jet-nav-link

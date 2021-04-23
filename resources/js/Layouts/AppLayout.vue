@@ -29,9 +29,10 @@
                     class="px-6 py-4"
                     :active="route().current(item.nickname)"
                     :href="route(item.nickname)"
-                    ><v-icon v-if="item.meta.icon" :name="item.meta.icon" />{{
-                      item.text
-                    }}</jet-nav-link
+                    ><v-icon
+                      v-if="item.meta.icon"
+                      :name="item.meta.icon"
+                    /><span>{{ $t(item.title) }}</span></jet-nav-link
                   >
                 </template>
               </li>

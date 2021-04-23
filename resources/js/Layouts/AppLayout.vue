@@ -41,12 +41,10 @@
 import TopBar from "@/Layouts/Components/TopBar";
 import JetBanner from "@/Jetstream/Banner";
 import JetApplicationMark from "@/Jetstream/ApplicationMark";
-import Button from "../Jetstream/Button";
 import Navigation from "@/Layouts/Components/Navigation";
 
 export default {
   components: {
-    Button,
     TopBar,
     JetBanner,
     JetApplicationMark,

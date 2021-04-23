@@ -68,7 +68,6 @@ export default {
 </script>
 
 <style scoped>
-
 .SubMenuItem {
   position: relative;
   padding-left: 1.5rem;

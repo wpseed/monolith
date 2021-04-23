@@ -43,4 +43,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/about', function () {
         return Inertia::render('Dashboard');
     })->name('about');
+
+    Route::get('/firstService', function () {
+        return Inertia::render('Dashboard');
+    })->name('firstService');
+    Route::get('/secondService', function () {
+        return Inertia::render('Dashboard');
+    })->name('secondService');
+    Route::get('/thirdService', function () {
+        return Inertia::render('Dashboard');
+    })->name('thirdService');
 });

@@ -22,22 +22,7 @@
         <div class="LayoutSidebarContent">
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:flex">
-            <ul class="w-full">
-              <li v-for="(item, index) in mainMenu" :key="index">
-                <template v-if="route().has(item.nickname)">
-                  <jet-nav-link
-                    class="px-6 py-4"
-                    :active="route().current(item.nickname)"
-                    :href="route(item.nickname)"
-                    ><v-icon
-                      class="mr-2"
-                      v-if="item.meta.icon"
-                      :name="item.meta.icon"
-                    /><span>{{ $t(item.title) }}</span></jet-nav-link
-                  >
-                </template>
-              </li>
-            </ul>
+            <Navigation :menu="mainMenu"/>
           </div>
         </div>
       </div>
@@ -56,14 +41,16 @@
 import TopBar from "@/Layouts/Components/TopBar";
 import JetBanner from "@/Jetstream/Banner";
 import JetApplicationMark from "@/Jetstream/ApplicationMark";
-import JetNavLink from "@/Jetstream/NavLink";
+import Button from "../Jetstream/Button";
+import Navigation from "@/Layouts/Components/Navigation";
 
 export default {
   components: {
+    Button,
     TopBar,
-    JetNavLink,
     JetBanner,
-    JetApplicationMark
+    JetApplicationMark,
+    Navigation
   },
   computed: {
     mainMenu() {

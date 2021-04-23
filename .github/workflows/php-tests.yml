@@ -6,5 +6,15 @@ jobs:
     name: PHPUnit
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: nathanheffley/laravel-phpunit-action@master
+      - uses: actions/checkout@v1
+      - name: Yarn Build
+        run: |
+          yarn install
+          yarn prod
+          cat public/mix-manifest.json # See asset versions in log
+      - name: Upload build files
+        uses: actions/upload-artifact@v1
+        with:
+          name: assets
+          path: public
+      - uses: nathanheffley/laravel-phpunit-action@master

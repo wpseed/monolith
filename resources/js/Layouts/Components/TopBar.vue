@@ -336,12 +336,14 @@
 import JetDropdown from "@/Jetstream/Dropdown";
 import JetDropdownLink from "@/Jetstream/DropdownLink";
 import JetResponsiveNavLink from "@/Jetstream/ResponsiveNavLink";
+import JetApplicationMark from "@/Jetstream/ApplicationMark";
 
 export default {
   components: {
     JetDropdown,
     JetDropdownLink,
-    JetResponsiveNavLink
+    JetResponsiveNavLink,
+    JetApplicationMark
   },
   data() {
     return {

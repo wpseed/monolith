@@ -28,5 +28,8 @@
         "vue-loader": "^15.9.6",
         "vue-tailwind": "^2.1.4",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "oh-vue-icons": "^0.4.2"
     }
 }

@@ -10,6 +10,11 @@ import VueTailwind from "vue-tailwind";
 import { TButton, TInput } from "vue-tailwind/dist/components";
 import { __ } from "matice";
 
+import OhVueIcon from "oh-vue-icons";
+import * as RiIcons from "oh-vue-icons/icons/ri";
+
+OhVueIcon.add(...Object.values({ ...RiIcons }));
+
 const settings = {
   "t-input": {
     component: TInput
@@ -18,12 +23,14 @@ const settings = {
     component: TButton
   }
 };
+
 Vue.use(VueTailwind, settings);
 
 Vue.mixin({ methods: { route } });
 Vue.mixin({ methods: { $t: __ } });
 Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
+Vue.component("v-icon", OhVueIcon);
 
 InertiaProgress.init({ color: "#4B5563" });
 

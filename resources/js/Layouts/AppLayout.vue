@@ -23,13 +23,13 @@
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:flex">
             <ul class="w-full">
-              <li v-for="(menu, index) in mainMenus" :key="index">
-                <template v-if="route().has(menu.nickname)">
+              <li v-for="(item, index) in mainMenu" :key="index">
+                <template v-if="route().has(item.nickname)">
                   <jet-nav-link
                     class="px-6 py-4"
-                    :active="route().current(menu.nickname)"
-                    :href="route(menu.nickname)"
-                    v-text="$t(menu.title)"
+                    :active="route().current(item.nickname)"
+                    :href="route(item.nickname)"
+                    v-text="$t(item.title)"
                   />
                 </template>
               </li>
@@ -62,7 +62,7 @@ export default {
     JetApplicationMark
   },
   computed: {
-    mainMenus() {
+    mainMenu () {
       const { menus } = this.$page.props;
       return (menus && menus.main) ? menus.main : [];
     }

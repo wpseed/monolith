@@ -20,6 +20,7 @@
         "laravel/jetstream": "^2.2",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "lavary/laravel-menu": "^1.8",
         "nwidart/laravel-modules": "^8.2",
         "tightenco/ziggy": "^1.0"
     },

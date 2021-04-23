@@ -5565,6 +5565,11 @@ obuf@^1.0.0, obuf@^1.1.2:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
+oh-vue-icons@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/oh-vue-icons/-/oh-vue-icons-0.4.2.tgz#5079fa2f5391bb742276756f0a2f66cdc705fefb"
+  integrity sha512-C96vAEdWapkkJHsvnKLKWueeXrHocjPAruaCx1M+DdFrQn8pIti9ozc7nhZDgkk9iK4aKFaDdKjuZweL66ubHg==
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"

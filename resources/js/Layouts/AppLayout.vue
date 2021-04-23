@@ -41,7 +41,7 @@
 import TopBar from "@/Layouts/Components/TopBar";
 import JetBanner from "@/Jetstream/Banner";
 import JetApplicationMark from "@/Jetstream/ApplicationMark";
-import Navigation from "@/Layouts/Components/Navigation";
+import Navigation from "@/Layouts/Components/Navigation/Navigation.vue";
 
 export default {
   components: {

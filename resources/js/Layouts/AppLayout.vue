@@ -23,32 +23,15 @@
           <!-- Navigation Links -->
           <div class="hidden space-x-8 sm:flex">
             <ul class="w-full">
-              <li>
-                <jet-nav-link
-                  class="px-6 py-4"
-                  :active="route().current('dashboard')"
-                  :href="route('dashboard')"
-                >
-                  {{ $t("Dashboard") }}
-                </jet-nav-link>
-              </li>
-              <li>
-                <jet-nav-link
-                  class="px-6 py-4"
-                  :active="route().current('dashboard')"
-                  :href="route('dashboard')"
-                >
-                  {{ $t("Dashboard") }}
-                </jet-nav-link>
-              </li>
-              <li>
-                <jet-nav-link
-                  class="px-6 py-4"
-                  :active="route().current('dashboard')"
-                  :href="route('dashboard')"
-                >
-                  {{ $t("Dashboard") }}
-                </jet-nav-link>
+              <li v-for="(menu, index) in mainMenus" :key="index">
+                <template v-if="route().has(menu.nickname)">
+                  <jet-nav-link
+                    class="px-6 py-4"
+                    :active="route().current(menu.nickname)"
+                    :href="route(menu.nickname)"
+                    v-text="$t(menu.title)"
+                  />
+                </template>
               </li>
             </ul>
           </div>
@@ -77,6 +60,12 @@ export default {
     JetNavLink,
     JetBanner,
     JetApplicationMark
+  },
+  computed: {
+    mainMenus() {
+      const { menus } = this.$page.props;
+      return (menus && menus.main) ? menus.main : [];
+    }
   }
 };
 </script>

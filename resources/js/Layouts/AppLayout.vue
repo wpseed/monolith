@@ -62,9 +62,9 @@ export default {
     JetApplicationMark
   },
   computed: {
-    mainMenu () {
+    mainMenu() {
       const { menus } = this.$page.props;
-      return (menus && menus.main) ? menus.main : [];
+      return menus && menus.main ? menus.main : [];
     }
   }
 };

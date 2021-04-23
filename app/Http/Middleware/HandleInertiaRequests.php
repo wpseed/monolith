@@ -39,7 +39,13 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'menus' => [
-                'main' => Menu::get('MainMenu')->all(),
+                'main' => Menu::get('MainMenu')->roots()->map(function ($item, $key) {
+                    $item->meta = $item->data();
+                    if ($item->hasChildren()) {
+                        $item->submenu = $item->children();
+                    }
+                    return $item;
+                }),
             ],
         ]);
     }

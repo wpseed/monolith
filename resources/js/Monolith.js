@@ -9,6 +9,7 @@ import PortalVue from "portal-vue";
 import VueTailwind from "vue-tailwind";
 import { TButton, TInput } from "vue-tailwind/dist/components";
 import { __ } from "matice";
+import OhVueIcon from "oh-vue-icons";
 
 const settings = {
   "t-input": {
@@ -26,6 +27,11 @@ Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
 
 InertiaProgress.init({ color: "#4B5563" });
+
+import * as RiIcons from "oh-vue-icons/icons/ri";
+const Ri = Object.values({ ...RiIcons });
+OhVueIcon.add(...Ri);
+Vue.component("v-icon", OhVueIcon);
 
 export default class Monolith {
   constructor(config) {

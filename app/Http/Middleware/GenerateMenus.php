@@ -17,7 +17,7 @@ class GenerateMenus
     public function handle($request, Closure $next)
     {
         \Menu::make('MainMenu', function ($menu) {
-            $menu->add('Dashboard', ['route'  => 'dashboard'])->data('icon', 'home');
+            $menu->add('Dashboard', ['route'  => 'dashboard'])->data('icon', 'ri-home-line');
             $menu->add('Services', 'services');
             $menu->get('services')->add('First service', ['route'  => 'dashboard']);
             $menu->item('services')->add('Second service', ['route'  => 'dashboard']);

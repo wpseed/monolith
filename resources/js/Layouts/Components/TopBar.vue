@@ -3,7 +3,14 @@
     <!-- Primary Navigation Menu -->
     <div class="px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
-        <div class="flex">
+        <div class="flex items-center">
+          <!-- Burger menu -->
+          <div class="flex-shrink-0 mr-2 md:hidden">
+            <button type="button" class="px-1" @click="$emit('click')">
+              <v-icon name="ri-menu-line"></v-icon>
+            </button>
+          </div>
+
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <inertia-link :href="route('dashboard')">
